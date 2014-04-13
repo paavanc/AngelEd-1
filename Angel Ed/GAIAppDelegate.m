@@ -7,12 +7,18 @@
 //
 
 #import "GAIAppDelegate.h"
+#import "Posts.h"
+#import "UIColor+Extras.h"
 
 @implementation GAIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Posts getAllPosts];
+    
+    [self customizeUserInterface];
+
     return YES;
 }
 							
@@ -41,6 +47,40 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Helper methods
+
+-(void)customizeUserInterface {
+    
+    // Customize the nav bar
+    // [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithR:34 G:137 B:228 A:0.9]];
+    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    // Changing tab bar styles
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"]];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    
+    UITabBarItem *tabPosts = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabProfile = [tabBar.items objectAtIndex:1];
+    UITabBarItem *tabStats = [tabBar.items objectAtIndex:2];
+    UITabBarItem *tabSettings = [tabBar.items objectAtIndex:3];
+
+    tabPosts.image = [[UIImage imageNamed:@"posts"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabProfile.image = [[UIImage imageNamed:@"profile"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabStats.image = [[UIImage imageNamed:@"stats"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabSettings.image = [[UIImage imageNamed:@"settings"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
 }
 
 @end

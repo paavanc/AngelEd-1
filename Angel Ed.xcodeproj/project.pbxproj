@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C201AB818F91D95008B4F31 /* PostsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C201AB718F91D95008B4F31 /* PostsTableCell.xib */; };
+		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
+		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
+		2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ADF918EFEAD500886313 /* SettingsViewController.m */; };
 		2CE24AA518E4F5C40091D406 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA418E4F5C40091D406 /* Foundation.framework */; };
 		2CE24AA718E4F5C40091D406 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */; };
 		2CE24AA918E4F5C40091D406 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA818E4F5C40091D406 /* UIKit.framework */; };
@@ -36,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C201AB718F91D95008B4F31 /* PostsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostsTableCell.xib; sourceTree = "<group>"; };
+		2C58931518E7A88400E392B6 /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
+		2C58931618E7A88400E392B6 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
+		2C58932118E7C08F00E392B6 /* MPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextView.h; sourceTree = "<group>"; };
+		2C58932218E7C08F00E392B6 /* MPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTextView.m; sourceTree = "<group>"; };
+		2C66ADF818EFEAD500886313 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2C66ADF918EFEAD500886313 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		2CE24AA118E4F5C40091D406 /* Angel Ed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Angel Ed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE24AA418E4F5C40091D406 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,9 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C201AB618F91D2E008B4F31 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C201AB718F91D95008B4F31 /* PostsTableCell.xib */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
 		2CE24A9818E4F5C40091D406 = {
 			isa = PBXGroup;
 			children = (
+				2CE24AB618E4F5C40091D406 /* Main.storyboard */,
 				2CE24AAA18E4F5C40091D406 /* Angel Ed */,
 				2CE24ACC18E4F5C40091D406 /* Angel EdTests */,
 				2CE24AA318E4F5C40091D406 /* Frameworks */,
@@ -118,9 +138,9 @@
 		2CE24AAA18E4F5C40091D406 /* Angel Ed */ = {
 			isa = PBXGroup;
 			children = (
+				2C201AB618F91D2E008B4F31 /* TableCell */,
 				2CE24AB318E4F5C40091D406 /* GAIAppDelegate.h */,
 				2CE24AB418E4F5C40091D406 /* GAIAppDelegate.m */,
-				2CE24AB618E4F5C40091D406 /* Main.storyboard */,
 				2CE24AB918E4F5C40091D406 /* GAIMasterViewController.h */,
 				2CE24ABA18E4F5C40091D406 /* GAIMasterViewController.m */,
 				2CE24ABC18E4F5C40091D406 /* GAIDetailViewController.h */,
@@ -129,6 +149,12 @@
 				2CE24AAB18E4F5C40091D406 /* Supporting Files */,
 				2CE24ADC18E4F8E30091D406 /* Posts.h */,
 				2CE24ADD18E4F8E30091D406 /* Posts.m */,
+				2C58931518E7A88400E392B6 /* UIColor+Extras.h */,
+				2C58931618E7A88400E392B6 /* UIColor+Extras.m */,
+				2C58932118E7C08F00E392B6 /* MPTextView.h */,
+				2C58932218E7C08F00E392B6 /* MPTextView.m */,
+				2C66ADF818EFEAD500886313 /* SettingsViewController.h */,
+				2C66ADF918EFEAD500886313 /* SettingsViewController.m */,
 			);
 			path = "Angel Ed";
 			sourceTree = "<group>";
@@ -239,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C201AB818F91D95008B4F31 /* PostsTableCell.xib in Resources */,
 				2CE24AC018E4F5C40091D406 /* Images.xcassets in Resources */,
 				2CE24AAF18E4F5C40091D406 /* InfoPlist.strings in Resources */,
 				2CE24AB818E4F5C40091D406 /* Main.storyboard in Resources */,
@@ -260,9 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */,
 				2CE24AB518E4F5C40091D406 /* GAIAppDelegate.m in Sources */,
 				2CE24ABB18E4F5C40091D406 /* GAIMasterViewController.m in Sources */,
+				2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */,
 				2CE24AB118E4F5C40091D406 /* main.m in Sources */,
+				2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */,
 				2CE24ABE18E4F5C40091D406 /* GAIDetailViewController.m in Sources */,
 				2CE24ADE18E4F8E30091D406 /* Posts.m in Sources */,
 			);
@@ -301,6 +331,7 @@
 				2CE24AB718E4F5C40091D406 /* Base */,
 			);
 			name = Main.storyboard;
+			path = "Angel Ed";
 			sourceTree = "<group>";
 		};
 		2CE24ACF18E4F5C40091D406 /* InfoPlist.strings */ = {
@@ -346,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -378,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -392,6 +423,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Angel Ed/Angel Ed-Prefix.pch";
 				INFOPLIST_FILE = "Angel Ed/Angel Ed-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -405,6 +437,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Angel Ed/Angel Ed-Prefix.pch";
 				INFOPLIST_FILE = "Angel Ed/Angel Ed-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -469,6 +502,7 @@
 				2CE24AD818E4F5C40091D406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CE24AD918E4F5C40091D406 /* Build configuration list for PBXNativeTarget "Angel EdTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +511,7 @@
 				2CE24ADB18E4F5C40091D406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
